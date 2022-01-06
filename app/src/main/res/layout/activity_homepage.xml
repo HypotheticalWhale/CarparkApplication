@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomepageActivity"
+    android:paddingTop="20dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/locationCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/locationButton"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@+id/locationButton">
+
+        <fragment
+            android:id="@+id/locationInput"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/locationButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/findlocation" />
+
+    <fragment
+        android:id="@+id/MapFUserInput"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="350dp"
+        android:layout_height="264dp"
+        android:layout_below="@id/locationCard"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="75dp" />
+
+    <Button
+        android:id="@+id/btnNearestCP"
+        android:layout_width="286dp"
+        android:layout_height="67dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="69dp"
+        android:layout_marginBottom="208dp"
+        android:text="Nearest Available Carpark" />
+
+    <Button
+        android:id="@+id/btnRoutePlanner"
+        android:layout_width="286dp"
+        android:layout_height="67dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="66dp"
+        android:layout_marginBottom="123dp"
+        android:text="Route Planner" />
+
+
+
+</RelativeLayout>
